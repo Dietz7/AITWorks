@@ -8,6 +8,7 @@ public class Calculation {
 
     }
 
+    public static void myMethod () {}
     public static int sumUpTo(int targetNumber) {
         int result = 0;
 
