@@ -23,7 +23,6 @@ class LibraryImplTest {
 
         for (Book b : book) {
             library.addBook(b);
-
         }
     }
 
@@ -40,6 +39,7 @@ class LibraryImplTest {
         // we have created and added a new book
         assertTrue(library.addBook(book1));
         assertEquals(5, library.quantity()); // there are 5 books now in our library
+        library.printBook();
         Book book2 = new Book (4196828509903L, "Zeit Sprachen", "Deutsch Perfekt", 2023);
         // we have created one more book and exceeded our capacity, that is why we will be setting up a test, that shows it
         assertFalse(library.addBook(book2));
@@ -60,7 +60,8 @@ class LibraryImplTest {
     @Test
     void findBook() {
         assertEquals(book [2], library.findBook(9783795724405L)); // search of the book by isbn
-        assertNull(library.findBook(1234567891123L)); // search of the nonexisted book
+
+        assertNull(library.findBook(1234567891123L)); // search of the nonexistent book
 
     }
 
