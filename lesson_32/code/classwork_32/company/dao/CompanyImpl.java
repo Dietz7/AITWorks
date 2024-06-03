@@ -127,11 +127,11 @@ public class CompanyImpl implements Company {
 
     @Override
     public Employee updateEmployee(int id, String secondName) {
-        // TODO
-        // find by id
-
-        // then we take the person we found and use setter for him
-
-        return null; // here must be the object of employee type
+       Employee employee = findEmployee(id); // find by id
+       if(employee != null) {
+           employee.setSecondName(secondName); // then we take the person we found and use setter for him
+           return employee; // here must be the object of employee type
+       }
+        return null;
     }
 }
