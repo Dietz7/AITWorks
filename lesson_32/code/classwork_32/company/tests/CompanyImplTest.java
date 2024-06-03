@@ -21,14 +21,14 @@ class CompanyImplTest {
     void setUp() {
         company = new CompanyImpl(5);
         e = new Employee[4];
-        e[0] = new Manager(101,"John", "Smith", 45, 160,
+        e[0] = new Manager(100, "John", "Smith", 45, 160,
                 5000, 5);
-        e[1] = new SalesManager(102,"Anna", "Black", 36, 160, 25000, 0.1);
-        e[2] = new SalesManager(103,"Thomas", "White", 28, 160, 30000, 0.1);
-        e[3] = new Worker(104, "Hans", "Bauer", 30, 80, 5);
+        e[1] = new SalesManager(101, "Anna", "Black", 36, 160, 25000, 0.1);
+        e[2] = new SalesManager(102, "Thomas", "White", 28, 160, 30000, 0.1);
+        e[3] = new Worker(103, "Gans", "Bauer", 30, 80, 5);
 
         // important to add elements of array into object Company
-        for (int i = 0; i < e.length ; i++) {
+        for (int i = 0; i < e.length; i++) {
             company.addEmployee(e[i]);
 
         }
@@ -56,14 +56,14 @@ class CompanyImplTest {
 
     @Test
     void removeEmployee() {
-        assertEquals(e[1], company.removeEmployee(102));
+        assertEquals(e[1], company.removeEmployee(101));
         assertEquals(3, company.quantity());
     }
 
     @Test
     void findEmployee() {
-        // find employeee with id = 102;
-        assertEquals(e[1], company.findEmployee(102));
+        // find employeee with id = 101;
+        assertEquals(e[1], company.findEmployee(101));
         // find employee with id = 107
         assertNull(company.findEmployee(107));
     }
@@ -81,7 +81,7 @@ class CompanyImplTest {
 
     @Test
     void avgSalary() {
-        assertEquals(11700/4, company.avgSalary());
+        assertEquals(11700 / 4, company.avgSalary());
     }
 
     @Test
@@ -96,18 +96,35 @@ class CompanyImplTest {
 
     @Test
     void findEmployeeHoursGreaterThen() {
-        Employee [] actual = company.findEmployeeHoursGreaterThen(100);
-        Employee [] expected = {e[0], e[1], e[2]};
+        Employee[] actual = company.findEmployeeHoursGreaterThen(100);
+        Employee[] expected = {e[0], e[1], e[2]};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     void findEmployeeSalaryRange() {
         company.printEmployee();
-        Employee [] actual = company.findEmployeeSalaryRange(2900, 6000);
+        Employee[] actual = company.findEmployeeSalaryRange(2900, 6000);
         Employee[] expected = {e[0], e[2]};
 
         assertArrayEquals(expected, actual);
 
+    }
+
+    @Test
+    void updateEmployee() {
+        // test for checking if the update was correct
+        Employee updatedEmployee = company.updateEmployee(101, "Red");
+        assertNotNull(updatedEmployee, "Employee should be found und updated");
+        assertEquals("Red", updatedEmployee.getSecondName(), "Employee second name should be updated");
+        assertEquals(101, updatedEmployee.getId(), "Employee ID should remain the same");
+        assertEquals("Anna", updatedEmployee.getFirstName(), "The second name of the employee should remain " +
+                "unchanged");
+        assertEquals(2500, updatedEmployee.calcSalary(), "The salary remains the same");
+
+        // test for checking the update of the non-existing employee
+        Employee NoPossibleUpdate = company.updateEmployee(111, "Incognito");
+        assertNull(NoPossibleUpdate,"Non-existen employee should not be added");
+        company.printEmployee();
     }
 }
