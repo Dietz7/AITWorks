@@ -44,6 +44,10 @@ public class CompanyAppl {
             System.out.println(e);
         }
 
+        //update employee details
+        Employee updatedEmployee = company.updateEmployee(102,"Red");
+        System.out.println("Employees after our update: ");
+        company.printEmployee();
     }
 
 }
