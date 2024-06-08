@@ -7,10 +7,20 @@ public class ToDoListImpl implements ToDoList {
     private List<Task> tasks = new ArrayList<>();
     private int taskCounter = 1;
 
+    public ToDoListImpl(int i) {
+    }
+
 
     @Override
     public void addNote(Task task) {
         task.setTaskNumber(taskCounter++);
+        tasks.add(task);
+    }
+
+    @Override
+    public void addNote(String note) {
+        Task task = new Task(taskCounter, note);
+        taskCounter++;
         tasks.add(task);
     }
 

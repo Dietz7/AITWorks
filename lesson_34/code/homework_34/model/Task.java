@@ -7,7 +7,10 @@ public class Task implements  Comparable <Task>{
     private String task;
     int taskNumber;
 
-    public Task(int i, String note, int i1) {
+    public Task(int id, String task) {
+        this.id = id;
+        this.task = task;
+        this.taskNumber = id;
     }
 
     public int getId() {
