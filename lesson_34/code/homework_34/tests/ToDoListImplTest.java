@@ -43,10 +43,10 @@ class ToDoListImplTest {
     void editNote() {
         toDoList.addNote("Meeting with Mama");
         System.out.println(toDoList.seeAllNotes());
-        toDoList.editNote(1, "Drinking coffee with Mama");
+        toDoList.editNote(1, "Drinking a coffee with Mama");
         List<Task> tasks = toDoList.seeAllNotes();
         assertEquals(1, tasks.size());
-        assertEquals("Drinking coffee with Mama", tasks.get(0).getTask());
+        assertEquals("Drinking a coffee with Mama", tasks.get(0).getTask());
         System.out.println(toDoList.seeAllNotes());
     }
 }
