@@ -1,4 +1,4 @@
-package homework_34;
+package homework_34.model;
 
 public enum MenuAction {
     ADD_NOTE(1, "Add a note"), SEE_ALL_NOTES(2, "See all notes"),
