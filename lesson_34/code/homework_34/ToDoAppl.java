@@ -32,7 +32,12 @@ public class ToDoAppl {
                     break;
                 case 2:
                     System.out.println("All notes:");
-                    toDoList.seeAllNotes().forEach((s) -> System.out.println(s)); // lyambda
+                    toDoList.seeAllNotes().forEach((s) -> System.out.println(s)); // Lambda expression
+                    // forEach is a method that iterates over each element in the list and performs the specified action.
+                    // The lambda expression (s) -> System.out.println(s) specifies the action to be performed for each element.
+                    // s is a parameter representing each Task object in the list.
+                    //System.out.println(s) is the action to be performed, which prints the Task OBJECT to the console.
+                    // In effect, this line prints each Task object in the list, one per line.
                     break;
                 case 3:
                     System.out.print("Enter the task number to delete: ");
