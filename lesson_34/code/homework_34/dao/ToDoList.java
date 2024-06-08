@@ -1,4 +1,6 @@
-package homework_34;
+package homework_34.dao;
+
+import homework_34.model.Task;
 
 import java.util.List;
 
