@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ToDoListImplTest {
+public class ToDoListImplTest {
     private ToDoListImpl toDoList;
 
     @BeforeEach
