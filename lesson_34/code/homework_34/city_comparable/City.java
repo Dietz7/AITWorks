@@ -62,10 +62,19 @@ public class City implements Comparable <City>{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof City city)) return false;
+        //This line checks if the current instance (this) and the object o are the same object in memory.
+        //If they are the same object, it returns true because they are obviously equal.
+        if (this == o) return true; //Check if this is the same as o:
+        //It checks if the object o is an instance of the City class.
+        //If o is not an instance of City, it returns false because they cannot be equal.
+        //If o is an instance of City, it casts o to a City object and assigns it to the variable city.
+        if (!(o instanceof City city)) return false; //Check if o is an instance of City:
         //return Objects.equals(name, city.name) && Objects.equals(country, city.country);
-        return this.name.equals(((City) o).name) && this.country.equals(((City) o).country);
+        //This compares the name and country fields of the current instance (this) and the City object o.
+        //It uses the equals method to compare the name and country fields.
+        //If both name and country fields are equal, it returns true; otherwise, it returns false.
+        return this.name.equals(((City) o).name) && this.country.equals(((City) o).country);//Compare the name
+        // and country fields:
     }
 
     @Override
