@@ -14,7 +14,7 @@ public class Smartphone extends Laptop {
     public String toString() {
         // call the super class's (parent class is Laptop) toString method
         StringBuilder sb = new StringBuilder(super.toString());
-        // then we add (synonym "append") 2 Laptop-specific fields, please see above to understand why
+        // then we add (synonym for word "append" - "add") 1 SMARTPHONE-specific field, please see above to understand why
         sb.append(", operation system: ").append(operationSystem);
         return sb.toString();
 
