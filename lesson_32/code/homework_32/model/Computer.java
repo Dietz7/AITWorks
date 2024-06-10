@@ -1,14 +1,11 @@
 package homework_32.model;
 
-import java.math.BigInteger;
-import java.util.Objects;
-
 public class Computer {
     private String brand;
     private String cpu;
     private int ram;
     private double price;
-    private long serialNumber; // manufacture serial number
+    private long serialNumber; 
 
     public Computer(String brand, String cpu, int ram, double price, long serialNumber) {
         this.brand = brand;
