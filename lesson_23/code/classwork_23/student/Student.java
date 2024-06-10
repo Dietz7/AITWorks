@@ -1,4 +1,4 @@
-package classwork.student;
+package classwork_23.student;
 
 import java.util.Arrays;
 import java.util.Objects;
