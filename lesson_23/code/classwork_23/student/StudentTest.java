@@ -1,6 +1,5 @@
-package classwork.student;
+package classwork_23.student;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
