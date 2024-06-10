@@ -1,4 +1,4 @@
-package classwork;
+package classwork_24;
 
 abstract class Animal {
     abstract void makeSound();
