@@ -1,4 +1,4 @@
-package classwork.sentence_test;
+package classwork_23.sentence_test;
 
 public class Sentence {
 
