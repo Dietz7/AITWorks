@@ -49,10 +49,10 @@ public class Car implements Comparable<Car> {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Car");
-        sb.append("brand = ").append(brand);
-        sb.append(", colour:  ").append(colour);
-        sb.append(", price:  ").append(price);
+        StringBuilder sb = new StringBuilder("Car ");
+        sb.append(" Brand = ").append(brand);
+        sb.append(", colour: ").append(colour);
+        sb.append(", price: ").append(price);
         sb.append(", age:  ").append(age);
         return sb.toString();
     }
