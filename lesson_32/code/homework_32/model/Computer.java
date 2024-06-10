@@ -5,13 +5,15 @@ public class Computer {
     private String cpu;
     private int ram;
     private double price;
-    private long serialNumber; 
+    private boolean discount;
+    private long serialNumber;
 
-    public Computer(String brand, String cpu, int ram, double price, long serialNumber) {
+    public Computer(String brand, String cpu, int ram, double price, boolean discount, long serialNumber) {
         this.brand = brand;
         this.cpu = cpu;
         this.ram = ram;
         this.price = price;
+        this.discount = discount;
         this.serialNumber = serialNumber;
     }
 
@@ -47,6 +49,10 @@ public class Computer {
         this.price = price;
     }
 
+    public boolean hasDiscount(){
+        return discount;
+    }
+
     public long getSerialNumber() {
         return serialNumber;
     }
@@ -55,14 +61,18 @@ public class Computer {
         this.serialNumber = serialNumber;
     }
 
+    private double displaySize;
+    private int batteryCapacity;
+    private String operationSystem;
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Computer");
         sb.append("brand = ").append(brand);
         sb.append(", cpu:  ").append(cpu);
         sb.append(", ram:  ").append(ram);
-        sb.append(", msn:  ").append(serialNumber);
+        sb.append(", price:  ").append(price);
+        sb.append(", discount:  ").append(discount);
+        sb.append(", serial number: ").append(serialNumber);
         return sb.toString();
     }
-
 }
