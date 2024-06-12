@@ -1,13 +1,16 @@
 package homework_32.dao;
 
+import homework.Discount;
 import homework_32.model.Computer;
 
-import java.math.BigInteger;
+import static homework_32.model.Computer.BARCODE_LENGTH;
+
 
 public class StockImpl implements Stock {
   // our fields
     private Computer [] computers;
     private int size;
+
 
     public StockImpl(int capacity){
       computers = new Computer[capacity];
@@ -16,7 +19,7 @@ public class StockImpl implements Stock {
 
     @Override
     public boolean addComputer(Computer computer) {
-      if (computer == null || size == computers.length || findComputer(computer.getSerialNumber()) != null) {
+      if (computer == null || size == computers.length || findComputer(computer.getMsn()) != null) {
         return false;
       }
       computers[size] = computer;
@@ -24,30 +27,31 @@ public class StockImpl implements Stock {
       return true;
     }
 
-    @Override
-    public Computer findComputer(long serialNumber) {
-      for (int i = 0; i < size; i++) {
-        if (computers[i].getSerialNumber() == serialNumber) {
-          return computers[i];
-        }
+  @Override
+  public Computer findComputer(long msn) {
+    for (int i = 0; i < size; i++) {
+      if (computers[i].getMsn() == msn) {
+        return computers[i];
       }
-      return null;
     }
+    return null;
+  }
+
+  // Method to find the first computer with a discount
+  public Computer findComputerWithDiscount() {
+    for (int i = 0; i < size; i++) {
+      Computer computer = computers[i];
+      if (computer.calcDiscount() < computer.getPrice()) {
+        return computer;
+      }
+    }
+    return null;  // Return null if no computer with a discount is found
+  }
 
     @Override
-    public Computer findWithDiscount(long serialNumber) {
+    public Computer removeComputer(long msn) {
       for (int i = 0; i < size; i++) {
-        if(computers[i].getSerialNumber() == serialNumber && computers[i].hasDiscount()){
-              return computers[i];
-        }
-      }  
-      return null;
-    }
-
-    @Override
-    public Computer removeComputer(long serialNumber) {
-      for (int i = 0; i < size; i++) {
-        if(computers[i].getSerialNumber() == serialNumber){
+        if(computers[i].getMsn() == msn){
           Computer removedComputer = computers[i];
           for (int j = i; j < size - 1; j++) {
             computers[j] = computers[j + 1];
@@ -60,7 +64,16 @@ public class StockImpl implements Stock {
         return null;
     }
 
-    @Override
+  @Override
+  public double calcDiscount() {
+      double totalDiscount = 0.0;
+    for (int i = 0; i < size; i++) {
+      totalDiscount += computers[i].calcDiscount();
+    }
+    return totalDiscount;
+  }
+
+  @Override
     public int quantity() {
         return size;
     }
