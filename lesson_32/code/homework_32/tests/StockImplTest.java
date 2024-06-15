@@ -71,7 +71,7 @@ class StockImplTest {
         // Set discounts on multiple computers
         if (computers[3] instanceof Smartphone) {
             ((Smartphone) computers[3]).setDiscountPercentage(15.0);
-            //// Set a discount for testing on the fourth computer (Smartphone)
+            // Set a discount for testing on the fourth computer (Smartphone)
         }
         // Verify computers with discounts
         discountComp = stock.findComputerWithDiscount();
