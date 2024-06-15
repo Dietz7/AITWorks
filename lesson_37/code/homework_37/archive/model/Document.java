@@ -78,9 +78,10 @@ public class Document implements Comparable<Document> {
         //If both are equal, it returns zero.
         return res != 0 ? res : Integer.compare(documentId, o.documentId);
         //This is a conditional (ternary) operator that checks the value of res.
-        //If res is not zero (res != 0), it means the folderIds were different, so it returns res (which could be negative
-        // or positive, indicating the relative order).
-        //If res is zero, it means the folderIds were the same, so it proceeds to compare the documentId values using Integer.compare(documentId, o.documentId).
+        //If res is not zero (res != 0), it means the folderIds were different, so it returns res
+        // (which could be negative or positive, indicating the relative order).
+        //If res is zero, it means the folderIds were the same, so it proceeds to compare the documentId values
+        // using Integer.compare(documentId, o.documentId).
         //If documentId of this is less than documentId of o, it returns a negative integer.
         //If documentId of this is greater than documentId of o, it returns a positive integer.
         //If both are equal, it returns zero.
