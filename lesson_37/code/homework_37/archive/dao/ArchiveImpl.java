@@ -10,8 +10,8 @@ public class ArchiveImpl implements Archive{
     private Document[] documents;
     private int size;
 
-    public ArchiveImpl(Document[] documents, int size) {
-        this.documents = documents;
+    public ArchiveImpl(int capacity) {
+        this.documents = new Document[capacity];
         this.size = 0;
     }
 
@@ -50,12 +50,12 @@ public class ArchiveImpl implements Archive{
     }
 
     @Override
-    public boolean updateDocument(int documentId, int folderId) {
+    public boolean updateDocument(int documentId, int folderId, String title, String url) {
         Document document = getDocumentFromArchive(documentId, folderId);
         if (document != null) {
+            document.setTitle(title);
+            document.setUrl(url);
             // Assuming update means changing some attributes, e.g., URL, content, etc.
-            // For example:
-            // document.setUrl(newUrl);
             return true;
         }
         return false;
