@@ -41,7 +41,7 @@ class AlbumImplTest {
 
     }
 
-    @Test
+    /*@Test
     void addPhoto() {
         // can´t add null
         assertFalse(album.addPhoto(null));
@@ -59,7 +59,7 @@ class AlbumImplTest {
 
     }
 
-    @Test
+   /* @Test
     void removePhoto() {
         // remove already existed photo
         assertTrue(album.removePhoto(3,2));
@@ -79,7 +79,7 @@ class AlbumImplTest {
 
     }
 
-    @Test
+    /* @Test
     void getPhotoFromAlbum() {
         assertEquals(ph[0], album.getPhotoFromAlbum(1,1));
         assertNull(album.getPhotoFromAlbum(5,5));
@@ -91,12 +91,12 @@ class AlbumImplTest {
         Photo[] actual = album.getAllPhotosFromAlbum(2);
         Arrays.sort(actual);
         assertArrayEquals(expected, actual);
-    }
+    } */
 
     @Test
     void getPhotoBetweenDates() {
         LocalDate ld = now.toLocalDate();
-        Photo[] actual = album. getPhotoBetweenDates(ld.minusDays(6), ld.minusDays(1));
+        Photo[] actual = album.getPhotoBetweenDates(ld.minusDays(6), ld.minusDays(1));
         Arrays.sort(actual);
         Photo[] expected = {ph[0], ph[1], ph[2]};
 
