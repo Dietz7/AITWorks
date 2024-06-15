@@ -1,0 +1,61 @@
+
+1. public int compareTo(Document o){}
+
+Full Explanation
+Compare folderId values:
+
+The method first compares the folderId of the current document with the folderId of the document being compared.
+If the folderIds are different, it immediately returns the result of this comparison.
+Compare documentId values if folderIds are equal:
+
+If the folderIds are the same, it then compares the documentId values.
+The result of this second comparison determines the order of the documents with the same folderId.
+Example
+Let's assume we have two Document objects, doc1 and doc2.
+
+doc1.folderId = 1, doc1.documentId = 10
+doc2.folderId = 1, doc2.documentId = 5
+When doc1.compareTo(doc2) is called:
+
+Integer.compare(doc1.folderId, doc2.folderId) returns 0 because both folderId are 1.
+Since res is 0, it compares documentId values.
+Integer.compare(doc1.documentId, doc2.documentId) returns a positive value (because 10 > 5).
+Therefore, doc1 is considered greater than doc2 when sorted.
+
+SUMMARY
+The compareTo method provides a way to sort Document objects first by folderId and, if they are equal, then by documentId.
+This implementation ensures a consistent and predictable ordering of Document instances.
+
+2. boolean addDocument(Document document);
+Potential Implementation and Use
+The actual implementation of the addDocument method will vary based on the class in which it is defined.
+Here’s a basic example to illustrate how such a method might be implemented within a class that manages
+a collection of Document objects:
+EXAMPLE IMPLEMENTATION (using ArrayList)
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DocumentManager {
+
+    private List<Document> documents; // The documents list stores Document objects.
+    //It is private, so it can only be accessed and modified through the class's methods.
+
+    public DocumentManager() {
+        this.documents = new ArrayList<>(); //Constructor
+        // The constructor initializes the documents list as an EMPTY ArrayList.
+    }
+
+    public boolean addDocument(Document document) {
+        if (document == null) {
+            return false; // Adding a null document is not allowed
+        }
+        return documents.add(document); // Adds the document to the list and returns true if successful
+    }
+
+   ADDITIONAL METHOD:
+   // This method returns the list of documents. It provides a way to access the documents that have been added.
+    public List<Document> getDocuments() {
+        return documents;
+    }
+}
