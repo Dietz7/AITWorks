@@ -59,3 +59,18 @@ public class DocumentManager {
         return documents;
     }
 }
+
+3.@Test
+      void getDocumentBetweenDates() {}
+     SUMMARY
+     PURPOSE: The purpose of this test method is to verify that the getDocumentBetweenDates method in the
+     Archive implementation (ArchiveImpl) correctly retrieves documents that were created within a specified date range.
+     COMPARISON: After retrieving the documents (actual), the test sorts them and compares them against an expected
+     set of documents (expected). Sorting ensures that even if the order of documents in actual varies, the test will
+     correctly assert equality based on content.
+     ASSUMPTIONS: This test assumes that getDocumentBetweenDates correctly filters documents based on creation dates
+     and returns them in an array format. The comparison (assertEquals) would typically follow in your test to assert
+     that actual and expected contain the same documents.
+     This method verifies the behavior of retrieving documents based on date ranges, which is crucial
+     for ensuring the correctness of date-based queries in your archive system. Adjustments to the actual and
+      expected documents would be made based on specific test scenarios and expected outcomes.
