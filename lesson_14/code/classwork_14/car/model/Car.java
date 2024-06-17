@@ -1,4 +1,4 @@
-package classwork.car.model;
+package classwork_14.car.model;
 
 public class Car {
     // colour - String color = white, red,...
