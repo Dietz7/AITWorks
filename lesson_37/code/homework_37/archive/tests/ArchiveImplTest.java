@@ -41,7 +41,7 @@ class ArchiveImplTest {
         Document doc1 = new Document(1, 4, "new added", "url7", now.minusDays(1));
         //we have created and added anew document
         assertTrue(archive.addDocument(doc1)); //yes, it is true that the document has been added!
-        assertEquals(7, 7);// 7 is the defined capacity-> we have added 1 doc -> 6+1=7.
+        assertEquals(7, archive.size());// 7 is the defined capacity-> we have added 1 doc -> 6+1=7.
         Document doc2 = new Document(1, 5, "add me", "url8", now.minusDays(1));
         assertFalse(archive.addDocument(doc2));//the defined capacity is 7, doc2 is the eight document, oops...
 
