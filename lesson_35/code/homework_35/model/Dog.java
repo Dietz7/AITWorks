@@ -1,19 +1,15 @@
 package homework_35.model;
 
 public class Dog extends Pet{
-    private String weight;
+    private double weight;
 
-    public Dog(int id, String name, String breed, int daysOfStay, double costPerDay, String weight) {
+    public Dog(int id, String name, String breed, int daysOfStay, double costPerDay, double weight) {
         super(id, name, breed, daysOfStay, costPerDay);
         this.weight = weight;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
-    }
-
-    public void setWeight(String weight) {
-        this.weight = weight;
     }
 
     @Override

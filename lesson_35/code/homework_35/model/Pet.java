@@ -70,7 +70,7 @@ public abstract class Pet {
     public String toString() {
         StringBuilder sb = new StringBuilder("Pet");
         sb.append(" id = ").append(id);
-        sb.append("name ").append(name);
+        sb.append(", name ").append(name);
         sb.append(", breed").append(breed);
         sb.append(" days of stay ").append(daysOfStay);
         sb.append(" costPerDay ").append(costPerDay);
