@@ -1,6 +1,5 @@
 package homework_32.dao;
 
-import homework.Discount;
 import homework_32.model.Computer;
 
 import static homework_32.model.Computer.BARCODE_LENGTH;
