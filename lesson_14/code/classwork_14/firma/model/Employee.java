@@ -1,4 +1,4 @@
-package classwork.firma.model;
+package classwork_14.firma.model;
 
 public class Employee {
 
