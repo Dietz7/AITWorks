@@ -37,11 +37,12 @@ class AlbumImplTest {
         // for each
         for (Photo p : ph) {
            album.addPhoto(p);
+           // System.out.println(p);
         }
 
     }
 
-    /*@Test
+    @Test
     void addPhoto() {
         // can´t add null
         assertFalse(album.addPhoto(null));
@@ -51,7 +52,7 @@ class AlbumImplTest {
         Photo photo = new Photo(3, 1, "title", "url1", now.minusDays(1));
         assertTrue(album.addPhoto(photo));
         // check size
-        assertEquals(7,6);
+        assertEquals(7, album.size());
         // can´t exceed capacity
         Photo photo1 = new Photo(3, 1, "title", "url1", now.minusDays(1));
         assertFalse(album.addPhoto(photo1));
@@ -59,7 +60,7 @@ class AlbumImplTest {
 
     }
 
-   /* @Test
+    @Test
     void removePhoto() {
         // remove already existed photo
         assertTrue(album.removePhoto(3,2));
@@ -79,7 +80,7 @@ class AlbumImplTest {
 
     }
 
-    /* @Test
+    @Test
     void getPhotoFromAlbum() {
         assertEquals(ph[0], album.getPhotoFromAlbum(1,1));
         assertNull(album.getPhotoFromAlbum(5,5));
@@ -91,7 +92,7 @@ class AlbumImplTest {
         Photo[] actual = album.getAllPhotosFromAlbum(2);
         Arrays.sort(actual);
         assertArrayEquals(expected, actual);
-    } */
+    }
 
     @Test
     void getPhotoBetweenDates() {
