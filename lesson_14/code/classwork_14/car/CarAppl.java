@@ -1,6 +1,6 @@
-package classwork.car;
+package classwork_14.car;
 
-import classwork.car.model.Car;
+import classwork_14.car.model.Car;
 
 public class CarAppl {
     public static void main(String[] args) {
