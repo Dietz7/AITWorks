@@ -6,7 +6,7 @@ public interface Hotel {
     boolean addPet(Pet pet);
     Pet removePet(int id);
     Pet findPet(int id);
-    Pet findPetByBreed();
+    Pet findPetByBreed(String breed);
     double calculateTotalRevenue();
     int quantity();
     void printPet();
