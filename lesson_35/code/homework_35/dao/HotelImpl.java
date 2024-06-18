@@ -56,7 +56,11 @@ public class HotelImpl implements Hotel {
 
     @Override
     public double calculateTotalRevenue() {
-        return 0;
+        double totalRevenue = 0;
+        for (int i = 0; i < size; i++) {
+            totalRevenue += pets[i].getTotalCost();
+        }
+        return totalRevenue;
     }
 
     @Override
