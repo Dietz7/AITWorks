@@ -1,6 +1,6 @@
-package homework.ait.book;
+package homework_15.ait.book;
 
-import homework.book.model.Book;
+import homework_15.book.model.Book;
 
 
 public class BookAppl {
