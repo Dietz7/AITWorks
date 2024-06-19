@@ -1,4 +1,4 @@
-package classwork.bank.model;
+package classwork_15.bank.model;
 
 public class BankAccount {
 
