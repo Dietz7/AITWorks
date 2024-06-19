@@ -1,6 +1,6 @@
-package classwork.bank;
+package classwork_15.bank;
 
-import classwork.bank.model.BankAccount;
+import classwork_15.bank.model.BankAccount;
 
 public class BankAppl {
     public static void main(String[] args) {
