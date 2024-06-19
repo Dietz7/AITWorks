@@ -1,4 +1,4 @@
-package homework.cube;
+package homework_15.cube;
 
 public class CubeAppl {
     public static void main(String[] args) {
