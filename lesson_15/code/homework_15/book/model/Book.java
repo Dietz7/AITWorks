@@ -1,4 +1,4 @@
-package homework.book.model;
+package homework_15.book.model;
 
 public class Book {
     private long isbn;
