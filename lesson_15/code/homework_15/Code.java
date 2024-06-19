@@ -1,4 +1,4 @@
-package homework;
+package homework_15;
 
 public class Code {
     // Method for defining (returning) the length of the barcode.
