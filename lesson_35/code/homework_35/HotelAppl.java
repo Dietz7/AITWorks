@@ -31,6 +31,11 @@ public class HotelAppl {
         double totalRevenue = hotel.calculateTotalRevenue();
         System.out.println("Total revenue of hotel is: " + totalRevenue);
 
+        //add new pet
+        Pet newPet = new Dog(5, "Brown", "Cocker Spaniel", 4, 25, 12);
+        hotel.addPet(newPet);
+        System.out.println("---------------------------------------------------------");
+        hotel.printPet();
     }
 
 
