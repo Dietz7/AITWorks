@@ -1,4 +1,4 @@
-package classwork.string_exercise;
+package classwork_22.string_exercise;
 
 import java.util.Arrays;
 
