@@ -1,4 +1,4 @@
-package homework.cube;
+package homework_15.cube;
 
  public class Cube {
      int a;
