@@ -1,4 +1,4 @@
-package classwork.user;
+package classwork_22.user;
 
 public class User {
     // fields
