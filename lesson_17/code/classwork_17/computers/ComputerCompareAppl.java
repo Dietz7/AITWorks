@@ -1,9 +1,8 @@
-package classwork.computers;
+package classwork_17.computers;
 
-import classwork.computers.model.Computer;
-import classwork.computers.model.Computer1;
-import classwork.computers.model.Laptop1;
-import classwork.computers.model.SmartPhone1;
+import classwork_17.computers.model.Computer1;
+import classwork_17.computers.model.Laptop1;
+import classwork_17.computers.model.SmartPhone1;
 
 public class ComputerCompareAppl {
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class ComputerCompareAppl {
         Computer1 computer = new Computer1("i5", 12, 512, "HP", 1000);
         System.out.println(computer);
         System.out.println(comp[0]);
-        boolean check = computer ==comp[0];
+        boolean check = computer == comp[0];
         System.out.println(check);
         System.out.println("-------------------------");
         System.out.println(computer.equals(comp[0]));
