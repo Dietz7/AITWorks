@@ -1,4 +1,4 @@
-package homework.supermarkt.model.child;
+package homework_17.supermarkt.model.child;
 
 public class MilkFood extends Food {
     private String milkType;
