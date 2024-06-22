@@ -1,4 +1,4 @@
-package classwork.computers.model;
+package classwork_17.computers.model;
 
 import java.util.Objects;
 
