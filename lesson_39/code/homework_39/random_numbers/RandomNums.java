@@ -1,6 +1,7 @@
 package homework_39.random_numbers;
 
 import java.util.ArrayList;
+//Fill an ArrayList structure with 20 random integers in the range from 1 to 10. Remove duplicates from the resulting list.
 
 public class RandomNums {
     public static void main(String[] args) {
