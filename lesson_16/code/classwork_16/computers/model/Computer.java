@@ -1,4 +1,4 @@
-package classwork.computers.model;
+package classwork_16.computers.model;
 
 public class Computer {
     private String cpu;
