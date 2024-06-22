@@ -1,7 +1,7 @@
-package homework.book;
+package homework_16.book;
 
-import homework.book.model.Book;
-import homework.book.model.Dictionary;
+import homework_15.book.model.Book;
+import homework_16.book.model.Dictionary;
 
 public class BookAppl {
     public static void main(String[] args) {
