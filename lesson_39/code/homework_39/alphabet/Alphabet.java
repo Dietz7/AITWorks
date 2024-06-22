@@ -2,6 +2,7 @@ package homework_39.alphabet;
 
 import java.util.ArrayList;
 
+//Fill a structure of type ArrayList with Latin characters from A to Z
 public class Alphabet {
     public static void main(String[] args) {
         ArrayList<Character> alphabet = new ArrayList<>();
