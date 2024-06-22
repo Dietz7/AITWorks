@@ -1,4 +1,4 @@
-package classwork.beverage;
+package classwork_16.beverage;
 
 public class Beer extends Beverage{
 
