@@ -1,6 +1,6 @@
-package homework.supermarkt.model.child;
+package homework_17.supermarkt.model.child;
 
-import homework.supermarkt.model.parent.Product;
+import homework_17.supermarkt.model.parent.Product;
 
 public class Food extends Product {
     private String expDate;
