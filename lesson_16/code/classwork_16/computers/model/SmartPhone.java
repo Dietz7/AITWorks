@@ -1,4 +1,6 @@
-package classwork.computers.model;
+package classwork_16.computers.model;
+
+import classwork_17.computers.model.Laptop1;
 
 public class SmartPhone extends Laptop1
 {
