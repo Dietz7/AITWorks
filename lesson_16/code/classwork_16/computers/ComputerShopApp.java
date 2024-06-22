@@ -1,8 +1,8 @@
-package classwork.computers;
+package classwork_16.computers;
 
-import classwork.computers.model.Computer1;
-import classwork.computers.model.Laptop1;
-import classwork.computers.model.SmartPhone1;
+import classwork_17.computers.model.Computer1;
+import classwork_17.computers.model.Laptop1;
+import classwork_17.computers.model.SmartPhone1;
 
 public class ComputerShopApp {
     public static void main(String[] args) {
