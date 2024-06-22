@@ -1,9 +1,9 @@
-package homework.supermarkt;
+package homework_17.supermarkt;
 
-import homework.supermarkt.model.child.Food;
-import homework.supermarkt.model.child.MeatFood;
-import homework.supermarkt.model.child.MilkFood;
-import homework.supermarkt.model.parent.Product;
+import homework_17.supermarkt.model.child.Food;
+import homework_17.supermarkt.model.child.MeatFood;
+import homework_17.supermarkt.model.child.MilkFood;
+import homework_17.supermarkt.model.parent.Product;
 
 public class MarketAppl {
     public static void main(String[] args) {
