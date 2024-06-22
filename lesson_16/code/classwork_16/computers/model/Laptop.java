@@ -1,4 +1,4 @@
-package classwork.computers.model;
+package classwork_16.computers.model;
 
 public class Laptop extends Computer {
 
