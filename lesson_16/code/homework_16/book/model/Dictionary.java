@@ -1,4 +1,6 @@
-package homework.book.model;
+package homework_16.book.model;
+
+import homework_15.book.model.Book;
 
 public class Dictionary extends Book {
 
