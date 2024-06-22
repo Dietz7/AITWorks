@@ -1,4 +1,4 @@
-package homework.supermarkt.model.parent;
+package homework_17.supermarkt.model.parent;
 
 public class Product {
     private double price;
