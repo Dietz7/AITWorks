@@ -61,7 +61,6 @@ public abstract class Product implements Comparable<Product>{
         sb.append(", name ").append(name);
         sb.append(", expDate ").append(expDate);
         sb.append(", barCode ").append(barCode);
-        sb.append(", total cost ").append(getTotalCost());
         return sb.toString();
     }
 
