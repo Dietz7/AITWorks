@@ -18,6 +18,7 @@ public class Food extends Product{
         this.category = category;
     }
 
+
     private Product[] products;
     private int size;
     @Override
