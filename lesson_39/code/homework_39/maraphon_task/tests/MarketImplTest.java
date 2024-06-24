@@ -57,7 +57,7 @@ class MarketImplTest {
 
     @Test
     void findProductByExpDate() {
-        assertEquals(products[0], superMarket.findProductByExpDate("2024-06-22"));
+        assertEquals(products[2], superMarket.findProductByExpDate("2024-07-19"));
         assertNull(superMarket.findProductByExpDate("2025-07-02"));
     }
 
