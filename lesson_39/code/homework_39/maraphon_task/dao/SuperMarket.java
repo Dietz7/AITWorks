@@ -7,6 +7,7 @@ boolean addProduct(Product product);
 Product removeProduct(int id);
 Product findProduct(int id);
 Product findProductByExpDate(String expDate);
+double getTotalCost();
 int quantity();
 void printProduct();
 }
