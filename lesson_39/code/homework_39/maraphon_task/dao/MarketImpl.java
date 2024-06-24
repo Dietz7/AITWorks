@@ -54,6 +54,15 @@ public class MarketImpl implements SuperMarket{
     }
 
     @Override
+    public double getTotalCost() {
+        double totalCost = 0;
+        for (int i = 0; i < size; i++) {
+            totalCost += products[i].getPrice();
+        }
+        return totalCost;
+    }
+
+    @Override
     public int quantity() {
         return size;
     }
