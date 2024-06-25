@@ -1,19 +1,28 @@
 package homework_39.planets;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Objects;
 
+/*Занести планеты солнечной системы в список, содержащий:
+
+наименование;
+расстояние до Солнца;
+массу;
+количество спутников. Вывести список планет отсортированный по:
+порядку расположения в солнечной системе;
+алфавиту;
+массе;
+количеству спутников. */
 public class PlanetsList {
 
     static class Planet implements Comparable<Planet> {
         private String name;
-        private double distanceToSun;
+        private double distance;
         private double mass;
         private int numberOfSatellites;
 
         public Planet(String name, double distanceToSun, double mass, int numberOfSatellites) {
             this.name = name;
-            this.distanceToSun = distanceToSun;
+            this.distance = distance;
             this.mass = mass;
             this.numberOfSatellites = numberOfSatellites;
         }
@@ -22,8 +31,8 @@ public class PlanetsList {
             return name;
         }
 
-        public double getDistanceToSun() {
-            return distanceToSun;
+        public double getDistance() {
+            return distance;
         }
 
         public double getMass() {
@@ -35,31 +44,26 @@ public class PlanetsList {
         }
 
         @Override
-        public int compareTo(Planet o) {
-            // Compare based on distance to the Sun
-            if (this.distanceToSun < o.distanceToSun) {
-                return -1;
-            } else if (this.distanceToSun > o.distanceToSun) {
-                return 1;
-            }
-
-            // If distance to the Sun is the same, compare alphabetically by name
-            return this.name.compareTo(o.name);
-
-            // Additional comparisons can be added based on mass and number of satellites if needed
-            // Example:
-            // if (this.mass < other.mass) {
-            //     return -1;
-            // } else if (this.mass > other.mass) {
-            //     return 1;
-            // }
-            // return 0;
+        public String toString() {
+            return "Planet{" +
+                    "name='" + name + '\'' +
+                    ", distance=" + distance +
+                    ", mass=" + mass +
+                    ", numberOfSatellites=" + numberOfSatellites +
+                    '}';
         }
 
         @Override
-        public String toString() {
-            return String.format("Planet{name='%s', distanceToSun=%.2f AU, mass=%.2f Earth masses, numberOfSatellites=%d}",
-                    name, distanceToSun, mass, numberOfSatellites);
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Planet planet = (Planet) o;
+            return Objects.equals(name, planet.name);
+        }
+
+        @Override
+        public int compareTo(Planet o) {
+            return Double.compare(this.getDistance(), o.getDistance());
         }
     }
 
