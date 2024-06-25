@@ -9,11 +9,11 @@ public class SentenceUniqueSymbols {
         int uniqueWordsCount = countUniqueWords(sentence);
         int uniqueCharsCount = countUniqueCharacters(sentence);
 
-        System.out.println("Уникальных слов: " + uniqueWordsCount);
-        System.out.println("Уникальных символов: " + uniqueCharsCount);
+        System.out.println("The number of unique words: " + uniqueWordsCount);
+        System.out.println("The number of unique characters: " + uniqueCharsCount);
     }
 
-    // Метод для подсчета уникальных слов в предложении
+    // A method for counting unique words in a sentence
     public static int countUniqueWords(String sentence) {
         Set<String> uniqueWords = new HashSet<>();
         String[] words = sentence.split("[^\\p{L}]+"); // Разбиваем предложение на слова
