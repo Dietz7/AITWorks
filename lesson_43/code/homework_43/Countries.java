@@ -2,6 +2,7 @@ package homework_43;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Countries {
     public static void main(String[] args) {
@@ -39,7 +40,7 @@ public class Countries {
         countryContinentMap.put("New Zealand", "Australia");
 
         // Create a map to store the count of countries per continent
-        Map<String, Integer> continentCountMap = new HashMap<>();
+        Map<String, Integer> continentCountMap = new TreeMap<>();
 
         // Count the number of countries per continent
         for (String country : countryContinentMap.keySet()) {
