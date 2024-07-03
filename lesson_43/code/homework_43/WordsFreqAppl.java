@@ -3,6 +3,7 @@ package homework_43;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class WordsFreqAppl {
     public static void main(String[] args) {
@@ -10,12 +11,13 @@ public class WordsFreqAppl {
 
         // Split the text into words
         String[] words = text.split("[\\s\\p{Punct}—]+");// Splits on spaces, punctuation, and em dashes
+        //Разделяет пробелы, знаки препинания и тире
 
         printWordFrequency(words);
     }
 
     private static void printWordFrequency(String[] words) {
-        Map<String, Integer> resMap = new HashMap<>();
+        Map<String, Integer> resMap = new TreeMap<>();
         for (String word : words) {
             word = word.toLowerCase(); // Convert to lower case to handle case sensitivity
             if (!resMap.containsKey(word)) {
@@ -25,7 +27,7 @@ public class WordsFreqAppl {
             }
         }
         for (Map.Entry<String, Integer> entry : resMap.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            System.out.println(entry.getKey() + "=> " + entry.getValue());
         }
     }
 }
