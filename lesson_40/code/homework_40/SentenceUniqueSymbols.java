@@ -17,6 +17,8 @@ public class SentenceUniqueSymbols {
     public static int countUniqueWords(String sentence) {
         Set<String> uniqueWords = new HashSet<>();
         String[] words = sentence.split("[^\\p{L}]+"); // Разбиваем предложение на слова
+        // [^\p{L}]: Соответствует любому символу, не являющемуся буквой.
+        //[^\p{L}]+: Квантификатор + означает "один или более" предыдущего элемента. Таким образом, здесь совпадает один или несколько последовательных символов, не являющихся буквами.
 
         for (String word : words) {
             if (!word.isEmpty()) {
