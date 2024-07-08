@@ -15,7 +15,7 @@ public class DekanatAppl {
         studentArray[4] = new Student( 5, "Yaroslav", "Petrenko", "09.12.1998", "Physics", 2, "Ukraine", "male" );
         studentArray[5] = new Student( 6, "Olesia", "Petrenko", "04.10.2002", "Mathematics", 1, "Ukraine", "female" );
         studentArray[6] = new Student( 7, "John", "Smith", "09.06.2003", "Economy", 4, "USA", "male" );
-        studentArray[7] = new Student( 9, "Eva", "Johnson", "07.01.2004", "Economy", 4, "USA", "female" );
+        studentArray[7] = new Student( 8, "Eva", "Johnson", "07.01.2004", "Economy", 4, "USA", "female" );
         studentArray[8] = new Student( 9, "Andrey", "Volkov", "29.11.2002", "Physics", 2, "Russia", "male" );
         studentArray[9] = new Student( 10, "Sophie", "Wagner", "04.02.2001", "Biology", 3, "Austria", "female" );
 
