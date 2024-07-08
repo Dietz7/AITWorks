@@ -21,7 +21,7 @@ public class Box implements Iterable<Parcel> {
     }
 
     public boolean addParcel(Parcel parcel) {
-        return parcels.add(new Parcel(2))
+        return parcels.add(new Parcel(2));
     }
 
     // how many parcels in Box
