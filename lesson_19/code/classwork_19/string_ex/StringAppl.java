@@ -1,4 +1,4 @@
-package classwork.string_ex;
+package classwork_19.string_ex;
 
 import java.util.Scanner;
 
