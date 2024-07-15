@@ -1,4 +1,4 @@
-package homework;
+package homework_21;
 
 public class MinMaxAppl {
 
