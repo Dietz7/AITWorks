@@ -1,6 +1,6 @@
-package classwork20.library.controller;
+package classwork_20.library.controller;
 
-import classwork20.library.model.Book;
+import classwork_20.library.model.Book;
 
 public class Library {
 
