@@ -1,4 +1,4 @@
-package homework.shop.model;
+package homework_20.shop.model;
 
 
 import java.math.BigInteger;
