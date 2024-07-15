@@ -1,4 +1,4 @@
-package classwork20.library.model;
+package classwork_20.library.model;
 
 import java.util.Objects;
 
