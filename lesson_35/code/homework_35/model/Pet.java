@@ -72,9 +72,9 @@ public abstract class Pet {
         sb.append(" id = ").append(id);
         sb.append(", name ").append(name);
         sb.append(", breed ").append(breed);
-        sb.append(" days of stay ").append(daysOfStay);
-        sb.append(" costPerDay ").append(costPerDay);
-        sb.append(" cost ").append(getTotalCost());
+        sb.append(", days of stay ").append(daysOfStay);
+        sb.append(", costPerDay ").append(costPerDay);
+        sb.append(", cost ").append(getTotalCost());
         return sb.toString();
     }
 
