@@ -5,46 +5,51 @@ import java.util.Collections;
 
 /*
 
-public class PlanetsAppl {
-        public void main(String[] args) {
-            ArrayList<PlanetsList.Planet> planets = new ArrayList<>();
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
-            // Add planets to the list
-            planets.add(new PlanetsList.Planet("Mercury", 0.39, 0.055, 0));
-            planets.add(new PlanetsList.Planet("Venus", 0.72, 0.815, 0));
-            planets.add(new PlanetsList.Planet("Earth", 1.0, 1.0, 1));
-            planets.add(new PlanetsList.Planet("Mars", 1.52, 0.107, 2));
-            planets.add(new PlanetsList.Planet("Jupiter", 5.2, 317.8, 79));
-            planets.add(new PlanetsList.Planet("Saturn", 9.58, 95.2, 82));
-            planets.add(new PlanetsList.Planet("Uranus", 19.22, 14.6, 27));
-            planets.add(new PlanetsList.Planet("Neptune", 30.05, 17.2, 14));
+public class PlanetAppl {
 
-            // Sort planets by distance to the Sun (default order)
-            Collections.sort(planets);
-            System.out.println("Planets sorted by order of location in the solar system:");
-            printPlanets(planets);
+    public static void main(String[] args) {
 
-            // Sort planets alphabetically by name
-            planets.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
-            System.out.println("\nPlanets sorted alphabetically by name:");
-            printPlanets(planets);
+        List<Planet> planets = new ArrayList<>();
 
-            // Sort planets by mass
-            planets.sort((p1, p2) -> Double.compare(p1.getMass(), p2.getMass()));
-            System.out.println("\nPlanets sorted by mass:");
-            printPlanets(planets);
+        planets.add(new Planet("Mercury", 58, 0.33, 0));
+        planets.add(new Planet("Venice", 108, 4.81, 0));
+        planets.add(new Planet("Earth", 150, 5.98, 1));
+        planets.add(new Planet("Mars", 228, 0.63, 2));
+        planets.add(new Planet("Jupiter", 775.5, 1876.64, 95));
+        planets.add(new Planet("Saturn", 1427, 561.80, 82));
+        planets.add(new Planet("Uran", 2860, 86.05, 27));
+        planets.add(new Planet("Neptun", 4500, 101.59, 14));
 
-            // Sort planets by number of satellites
-            planets.sort((p1, p2) -> Integer.compare(p1.getNumberOfSatellites(), p2.getNumberOfSatellites()));
-            System.out.println("\nPlanets sorted by number of satellites:");
-            printPlanets(planets);
-        }
-
-        private static void printPlanets(ArrayList<PlanetsList.Planet> planets) {
-            for (PlanetsList.Planet planet : planets) {
-                System.out.println(planet);
+        Comparator<Planet> comparatorAlphabet = new Comparator<Planet>() {
+            @Override
+            public int compare(Planet o1, Planet o2) {
+                return o1.getName().compareTo(o2.getName());
             }
+        };
+
+        System.out.println("------------- Sort by alphabet ------------");
+        planets.sort(comparatorAlphabet);
+        for (Planet p : planets) {
+            System.out.println(p);
         }
 
-}
+        Comparator<Planet> comparatorDistance = new Comparator<Planet>() {
+            @Override
+            public int compare(Planet o1, Planet o2) {
+                return Double.compare(o1.getDistance(), o2.getDistance());
+            }
+        };
+        System.out.println("------------- Sort by distance ------------");
+        planets.sort(comparatorDistance);
+        for (Planet p : planets) {
+            System.out.println(p);
+        }
+
+        // далее по аналогии
+
+    }
 */
