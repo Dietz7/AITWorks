@@ -1,7 +1,7 @@
-package classwork20.library;
+package classwork_20.library;
 
-import classwork20.library.controller.Library;
-import classwork20.library.model.Book;
+import classwork_20.library.controller.Library;
+import classwork_20.library.model.Book;
 
 public class LibraryAppl {
     public static void main(String[] args) {
