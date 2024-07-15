@@ -1,4 +1,4 @@
-package classwork.arguments;
+package classwork_21.arguments;
 
 public class ArgsApplExample {
     public static void main(String[] args) {
