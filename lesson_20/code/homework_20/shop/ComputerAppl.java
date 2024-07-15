@@ -1,8 +1,8 @@
-package homework.shop;
+package homework_20.shop;
 
 
-import homework.shop.controller.Stock;
-import homework.shop.model.Computer;
+import homework_20.shop.controller.Stock;
+import homework_20.shop.model.Computer;
 
 import java.math.BigInteger;
 
