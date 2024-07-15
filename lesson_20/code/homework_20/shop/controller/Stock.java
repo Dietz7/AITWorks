@@ -1,6 +1,6 @@
-package homework.shop.controller;
+package homework_20.shop.controller;
 
-import homework.shop.model.Computer;
+import homework_20.shop.model.Computer;
 
 import java.math.BigInteger;
 
@@ -26,7 +26,7 @@ public class Stock {
     // addComputer
     public boolean addComputer (Computer computer){
         //it is necessary to add element to an array
-        //foresee that null and duplicate will not be added, the capacity of the library will not be exceeded
+        //foresee that null and duplicate will not be added, the capacity of the stock will not be exceeded
         if (computer == null || size == computers.length || findComputer (computer.getMsn()) != null) {
           return false;
         }
@@ -37,7 +37,7 @@ public class Stock {
 
    public Computer findComputer(BigInteger msn) {
         for (int i = 0; i < size; i++) {
-            if (computers[i].getMsn ()== msn) { //were computers instead of Objects, i CHANGED ONE WORD
+            if (computers[i].getMsn ()== msn) { //were computers instead of Objects, I CHANGED ONE WORD
                 return computers[i];
             }
         }
