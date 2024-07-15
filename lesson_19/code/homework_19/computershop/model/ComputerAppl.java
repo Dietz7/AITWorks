@@ -1,4 +1,4 @@
-package homework.computershop.model;
+package homework_19.computershop.model;
 
 public class ComputerAppl {
 
