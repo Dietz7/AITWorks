@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class CurrencyImpl implements CurrencyConverter {
-    private static final String TRANSACTION_FILE = "resources/transactions.txt";
+    private static final String TRANSACTION_FILE = "C:/Users/User/Desktop/Java Kurs 2024/lesson_49/code/homework_49/resources/transactions.txt";
     private List<Transaction> transactions = new ArrayList<>();
     private Map<String, Currency> currencyMap = new HashMap<>();
 
@@ -40,6 +40,7 @@ public class CurrencyImpl implements CurrencyConverter {
         if (currency != null) {
             double exchangedAmount = amount * currency.getBuyRate();
             transactions.add(new Transaction(currencyCode, amount, exchangedAmount, true));
+            saveTransactionsToFile(TRANSACTION_FILE); // Save transaction to file
             System.out.printf("You bought %.2f %s%n", exchangedAmount, currencyCode);
         } else {
             System.out.println("Invalid currency code!");
@@ -52,6 +53,7 @@ public class CurrencyImpl implements CurrencyConverter {
         if (currency != null) {
             double exchangedAmount = amount / currency.getSellRate();
             transactions.add(new Transaction(currencyCode, amount, exchangedAmount, false));
+            saveTransactionsToFile(TRANSACTION_FILE); // Save transaction to file
             System.out.printf("You sold %.2f %s%n", exchangedAmount, currencyCode);
         } else {
             System.out.println("Invalid currency code!");
@@ -68,10 +70,10 @@ public class CurrencyImpl implements CurrencyConverter {
                 bw.write(transaction.toString());
                 bw.newLine();
             }
+            System.out.println("Transactions saved to file: " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
-
-
 }
