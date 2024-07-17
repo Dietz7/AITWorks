@@ -13,6 +13,22 @@ public class Transaction {
         this.isBuy = isBuy;
     }
 
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public double getExchangedAmount() {
+        return exchangedAmount;
+    }
+
+    public boolean isBuy() {
+        return isBuy;
+    }
+
     @Override
     public String toString() {
         return String.format("%s %s %.2f for %.2f", isBuy ? "Bought" : "Sold", currencyCode, exchangedAmount, amount);
